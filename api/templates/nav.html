@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="{{url_for('static',filename='../static/navstyle.css')}}">
+<nav>
+    <ul class="nav-selection">
+        <li><a class="{% if request.endpoint == 'main.apipage' %}active{% endif %}" href="{{ url_for('.apipage') }}">stockTrading</a></li>
+        <li><a class="{% if request.endpoint == 'main.homepage' %}active{% endif %}" href="{{ url_for('.homepage') }}">Home</a></li>
+        <li><a class="{% if request.endpoint == 'main.aboutpage' %}active{% endif %}" href="{{url_for('.aboutpage')}}">About</a></li>
+        <li><a class="{% if request.endpoint == 'main.page1' %}active{% endif %}" href="#page">page</a></li>
+    </ul>
+</nav>

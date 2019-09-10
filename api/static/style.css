@@ -1,0 +1,36 @@
+.container{
+    background-color:white;
+    width: 25%;
+    margin: 0 auto;
+    font-family:'Comic Sans MS','Courier New', Courier, monospace;
+    /* font-size: larger; */
+}
+.coins{
+    color: blue;
+    font-size: 20px;
+}
+.params{
+    color: red;
+    font-size: 20px;
+}
+.number{
+    height: 10px;
+}
+
+.timedelta{
+    width: 8em;
+}
+
+#keepGettingData{
+    display: none;
+}
+
+#klineparams{
+    display: none;
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}

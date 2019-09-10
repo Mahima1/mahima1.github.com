@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+    .error {
+        width: 100%;
+        font-family: 'Comic Sans MS', 'Courier New', Courier, monospace;
+        font-size: 3em;
+        color: #61afef;
+        /* #665038;; */
+        text-align: center;
+    }
+</style>
+<p class="error">Error occured: {{error}}</p>
+{% endblock %}

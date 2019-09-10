@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head> -->
+    <!-- <meta charset="UTF-8"> -->
+{% extends 'layout.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='../static/style.css')}}">
+<script type="text/javascript" src="{{ url_for('static', filename='../static/script.js')}}"></script>
+
+<!--</head>-->
+<!--<body> -->
+
+<div class="container">
+    <p class="coins" >
+        Coins
+    </p>
+    <form method="post" action="/api/binance">
+        <input type="radio" name="coins" value="LTCBTC" checked>Litecoin<br>
+        <input type="radio" name="coins" value="XMRBTC">Monero<br>
+        <input type="radio" name="coins" value="ETHBTC">Ethereum<br>
+        <input type="radio" name="coins" value="NEOBTC">Neo<br>
+        <input type="radio" name="coins" value="BTCUSDT">Bitcoin<br>
+    <p class="params">Parameters</p>
+         <select name="endpoints" onchange="displayInputKlineInterval(this)">
+              <option value="depth">Order book</option>
+              <option value="trades">Recent trades list</option> <!--Get recent trades (up to last 500).-->
+              <option value="klines">Candlestick data</option>
+              <option value="ticker/24hr">24hr ticker price change statistics</option> <!--24 hour rolling window price change statistics.-->
+              <option value="exchnageInfo">Exchange information</option> <!--Current exchange trading rules and symbol information-->
+        </select><br><br>
+        <div id="klineparams">
+            <input type="number" class="number" name="number">
+            <div class="divider"></div>
+                <select name="timedelta" class="timedelta">
+                    <option value="m">minute</option>
+                    <option value="h">hour</option>
+                    <option value="d">day</option>
+                    <option value="w">week</option>
+                    <option value="M">month</option>
+                </select>
+        </div>
+        <div  id="keepGettingData">
+        <br>
+        <input type="checkbox" value=True>Keep getting data every specified interval
+        <br><br>
+        </div>
+        <input id="submitbutton" type="submit">
+    </form>
+    <!--<button type="button" onclick="func()">JS</button>-->
+</div>
+{% endblock %}
+<!-- </body>
+</html> -->

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='../static/pace.min.js')}}"></script>-->
+    <!--<link rel="stylesheet" href="{{url_for('static',filename='../static/pace.css')}}"/>-->
+    <link rel="stylesheet" href="{{url_for('static',filename='../static/layoutstyle.css')}}">
+    <title>StockTrading</title>
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <br><br>
+    {% block content %}{% endblock %}
+    <br>
+    <footer class="footer">
+        <p>Copyright © 2019 <a style="color:#d19a66;" href="http://github.com/mahima1">Mahima Jain</a>. All rights
+            reserved.</p>
+    </footer>
+</body>
+
+</html>
